@@ -1,0 +1,67 @@
+<testsuite failures="0" name="src/test/java/features/headers.feature" skipped="0" tests="3" time="4.617952">
+  <testcase classname="src.test.java.features.headers" name="pass the user request with headers scenario 1" time="1.76714">
+    <system-out>Given header Content-Type = 'text/xml;charset=ISO-8859-1' ................. passed
+And header Accept-Encoding = 'gzip,deflate' ............................... passed
+And header Connection = 'Keep-Alive' ...................................... passed
+And header Expect = '100-continue' ........................................ passed
+And header User-Agent = 'Mozilla/4.0(compatible;IE;GACv7\. 1\. 5192\. 22378)' . passed
+And header Authoeization = 'Bearer 5b62f89b0056585969f112bc3d07f726481559fab42599241dcab33d2b9f6d2e' . passed
+* def query = {id: 30} .................................................... passed
+When url baseUrl + '/public/v1/users' ..................................... passed
+And params query .......................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.features.headers" name="pass the user request with headers scenario 2" time="1.408367">
+    <system-out>Given header Content-Type = 'text/xml;charset=ISO-8859-1' ................. passed
+And header Accept-Encoding = 'gzip,deflate' ............................... passed
+And header Connection = 'Keep-Alive' ...................................... passed
+And header Expect = '100-continue' ........................................ passed
+And header User-Agent = 'Mozilla/4.0(compatible;IE;GACv7\. 1\. 5192\. 22378)' . passed
+And header Authoeization = 'Bearer 5b62f89b0056585969f112bc3d07f726481559fab42599241dcab33d2b9f6d2e' . passed
+* def query = {id: 30} .................................................... passed
+When url baseUrl + '/public/v1/users' ..................................... passed
+And params query .......................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* def requestHeaders = {Content-Type: 'text/xml;charset=ISO-8859-1', Accept-Encoding: 'gzip,deflate', Connection: 'Keep-Alive', Expect: '100-continue', User-Agent: 'Mozilla/4.0(compatible;IE;GACv7\. 1\. 5192\. 22378)', Authoeization: 'Bearer 5b62f89b0056585969f112bc3d07f726481559fab42599241dcab33d2b9f6d2e'} . passed
+Given headers requestHeaders .............................................. passed
+* def query = {id: 30} .................................................... passed
+When url baseUrl + '/public/v1/users' ..................................... passed
+And params query .......................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.features.headers" name="pass the user request with headers scenario 3" time="1.442445">
+    <system-out>Given header Content-Type = 'text/xml;charset=ISO-8859-1' ................. passed
+And header Accept-Encoding = 'gzip,deflate' ............................... passed
+And header Connection = 'Keep-Alive' ...................................... passed
+And header Expect = '100-continue' ........................................ passed
+And header User-Agent = 'Mozilla/4.0(compatible;IE;GACv7\. 1\. 5192\. 22378)' . passed
+And header Authoeization = 'Bearer 5b62f89b0056585969f112bc3d07f726481559fab42599241dcab33d2b9f6d2e' . passed
+* def query = {id: 30} .................................................... passed
+When url baseUrl + '/public/v1/users' ..................................... passed
+And params query .......................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* def requestHeaders = {Content-Type: 'text/xml;charset=ISO-8859-1', Accept-Encoding: 'gzip,deflate', Connection: 'Keep-Alive', Expect: '100-continue', User-Agent: 'Mozilla/4.0(compatible;IE;GACv7\. 1\. 5192\. 22378)', Authoeization: 'Bearer 5b62f89b0056585969f112bc3d07f726481559fab42599241dcab33d2b9f6d2e'} . passed
+Given headers requestHeaders .............................................. passed
+* def query = {id: 30} .................................................... passed
+When url baseUrl + '/public/v1/users' ..................................... passed
+And params query .......................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed
+* configure headers = {Content-Type: 'text/xml;charset=ISO-8859-1', Accept-Encoding: 'gzip,deflate', Connection: 'Keep-Alive', Expect: '100-continue', User-Agent: 'Mozilla/4.0(compatible;IE;GACv7\. 1\. 5192\. 22378)', Authoeization: 'Bearer 5b62f89b0056585969f112bc3d07f726481559fab42599241dcab33d2b9f6d2e'} . passed
+* def query = {id: 30} .................................................... passed
+Given url baseUrl + '/public/v1/users' .................................... passed
+And params query .......................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* print response .......................................................... passed</system-out>
+  </testcase>
+</testsuite>

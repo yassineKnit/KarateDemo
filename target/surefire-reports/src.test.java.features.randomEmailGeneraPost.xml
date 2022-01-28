@@ -1,0 +1,17 @@
+<testsuite failures="0" name="src/test/java/features/randomEmailGeneraPost.feature" skipped="0" tests="1" time="1.947232">
+  <testcase classname="src.test.java.features.randomEmailGeneraPost" name="create user with post request using email generator" time="1.947232">
+    <system-out>* url 'https://gorest.co.in' .............................................. passed
+* def generateEmail = ..................................................... passed
+* def randomEmail = generateEmail(6) ...................................... passed
+* print randomEmail ....................................................... passed
+* def requestPayload = .................................................... passed
+* set requestPayload.email = randomEmail .................................. passed
+* print requestPayload .................................................... passed
+Given path '/public/v1/users' ............................................. passed
+And request requestPayload ................................................ passed
+And header Authorization = 'Bearer ' + tokenID ............................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match $.data.email == randomEmail ..................................... passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,21 @@
+<testsuite failures="0" name="src/test/java/features/postJsonFile.feature" skipped="0" tests="1" time="1.865736">
+  <testcase classname="src.test.java.features.postJsonFile" name="Create user with post request from json file" time="1.865736">
+    <system-out>* url 'https://gorest.co.in' .............................................. passed
+* def generateEmail = ..................................................... passed
+* def randomEmail = generateEmail(10) ..................................... passed
+* print randomEmail ....................................................... passed
+* def requestPayload = read('classpath:src/test/resources/payload/user.json') . passed
+* set requestPayload.email = randomEmail .................................. passed
+* print requestPayload .................................................... passed
+Given path '/public/v1/users' ............................................. passed
+And request requestPayload ................................................ passed
+And header Authorization = 'Bearer ' + tokenID ............................ passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+And match $.data.id == '#present' ......................................... passed
+And match $.data.name == '#present' ....................................... passed
+And match $.data.email == '#present' ...................................... passed
+And match $.data.email == randomEmail ..................................... passed
+* print response .......................................................... passed</system-out>
+  </testcase>
+</testsuite>

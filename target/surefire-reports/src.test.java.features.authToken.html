@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+      
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            
+        <meta charset="utf-8">
+            
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+            
+        <link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+            
+        <link href="res/karate-report.css" rel="stylesheet" type="text/css">
+            
+        <link href="favicon.ico" rel="shortcut icon">
+            <script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+        <title>src.test.java.features.authToken</title>
+          
+    </head>
+      
+    <body>
+            
+        <div id="root-container">
+                  
+            <div id="leftnav">
+                        
+                <div class="nav-logo">
+                              <a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+                    <div class="nav-count">
+                                    
+                        <div class="bg-success" id="nav-pass">1</div>
+                                    
+                        <div class="bg-danger" id="nav-fail">0</div>
+                                  
+                    </div>
+                            
+                </div>
+                        
+                <div id="nav-type">Scenarios</div>
+                         
+        
+                <div id="nav-date">2022-01-27 05:12:59 PM</div>
+                        
+      
+                <div class="nav-container">
+                    <div class="nav-item passed">
+                        <a href="#[1:2]">[1:2] send api request with token </a>
+                    </div>
+                </div>
+            </div>
+                  
+            <div id="content">
+                      
+                <div class="page-heading alert alert-primary">
+                    <a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/features/authToken.feature</span><span class="feature-description">api authentication</span>
+                </div>
+                <div class="scenario">
+                    <div class="scenario-heading" id="[1:2]">
+                        <div class="heading-container">
+                            <div class="scenario-tags"></div>
+                            <span class="scenario-keyword">Scenario: [1:2]</span><span class="scenario-name">send api request with token </span>
+                        </div>
+                        <div class="scenario-time passed">ms: 3937</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="1">
+                            <div class="step-ref passed">1</div>
+                            <div class="step-cell passed">* def query = {status: 'active', gender: 'male'}</div>
+                        </div>
+                        <div class="time-cell passed">1</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="2">
+                            <div class="step-ref passed">2</div>
+                            <div class="step-cell passed">Given url baseUrl + '/public/v1/users'</div>
+                        </div>
+                        <div class="time-cell passed">2</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="3">
+                            <div class="step-ref passed">3</div>
+                            <div class="step-cell passed">And header Authorization = 'Bearer ' + tokenID</div>
+                        </div>
+                        <div class="time-cell passed">2</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="4">
+                            <div class="step-ref passed">4</div>
+                            <div class="step-cell passed">And params query</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="5">
+                            <div class="step-ref passed">5</div>
+                            <div class="step-cell passed">When method GET</div>
+                        </div>
+                        <div class="time-cell passed">3930</div>
+                    </div>
+                    <div class="preformatted" data-parent="5">17:12:55.300 request:
+1 &gt; GET https://gorest.co.in/public/v1/users?status=active&amp;gender=male
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Bearer 5b62f89b0056585969f112bc3d07f726481559fab42599241dcab33d2b9f6d2e
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: gorest.co.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/13)
+
+17:12:59.048 response time in milliseconds: 3744.19
+1 &lt; 200
+1 &lt; Cache-Control: max-age=0, private, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Thu, 27 Jan 2022 16:12:58 GMT
+1 &lt; ETag: W/"8065551a0050583ad494910215ec704e"
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Server: nginx
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: [Accept-Encoding, Origin]
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; X-RateLimit-Limit: 90
+1 &lt; X-RateLimit-Remaining: 89
+1 &lt; X-RateLimit-Reset: 1
+1 &lt; X-Request-Id: 6f9ced11-b289-49f2-9279-915ffc3fef73
+1 &lt; X-Runtime: 0.022039
+1 &lt; X-XSS-Protection: 0
+{"meta":{"pagination":{"total":195,"pages":10,"page":1,"limit":20,"links":{"previous":null,"current":"https://gorest.co.in/public/v1/users?page=1","next":"https://gorest.co.in/public/v1/users?page=2"}}},"data":[{"id":852,"name":"Akroor Patil","email":"akroor_patil@schumm.co","gender":"male","status":"active"},{"id":848,"name":"Dr. Suryakant Varma","email":"suryakant_varma_dr@klocko.info","gender":"male","status":"active"},{"id":839,"name":"Damayanti Banerjee","email":"banerjee_damayanti@dach-hermann.net","gender":"male","status":"active"},{"id":837,"name":"Rep. Adwitiya Rana","email":"adwitiya_rana_rep@braun.info","gender":"male","status":"active"},{"id":834,"name":"Aayushman Dutta","email":"dutta_aayushman@dickens.net","gender":"male","status":"active"},{"id":826,"name":"Charuchandra Desai","email":"desai_charuchandra@hermiston-hermann.co","gender":"male","status":"active"},{"id":815,"name":"Ajeet Rana","email":"ajeet_rana@weimann-koelpin.org","gender":"male","status":"active"},{"id":813,"name":"Deepali Iyer","email":"iyer_deepali@oberbrunner-kihn.com","gender":"male","status":"active"},{"id":811,"name":"Ahalya Kaur","email":"kaur_ahalya@adams.net","gender":"male","status":"active"},{"id":809,"name":"Gudakesa Jha","email":"jha_gudakesa@haley-swift.com","gender":"male","status":"active"},{"id":802,"name":"Gayatri Dwivedi","email":"dwivedi_gayatri@cartwright.name","gender":"male","status":"active"},{"id":797,"name":"Anish Menon JD","email":"anish_menon_jd@braun-halvorson.name","gender":"male","status":"active"},{"id":790,"name":"Deeptimayee Bhattacharya","email":"bhattacharya_deeptimayee@roob.co","gender":"male","status":"active"},{"id":782,"name":"Chandraprabha Chopra","email":"chopra_chandraprabha@barton.io","gender":"male","status":"active"},{"id":780,"name":"Prof. Brajendra Guneta","email":"guneta_prof_brajendra@gislason.info","gender":"male","status":"active"},{"id":772,"name":"Achyut Deshpande III","email":"iii_deshpande_achyut@braun.biz","gender":"male","status":"active"},{"id":768,"name":"Jagdeep Mukhopadhyay","email":"mukhopadhyay_jagdeep@kautzer.info","gender":"male","status":"active"},{"id":765,"name":"Ajeet Kakkar","email":"kakkar_ajeet@jones.info","gender":"male","status":"active"},{"id":762,"name":"Kartik Achari","email":"kartik_achari@wolff-rau.biz","gender":"male","status":"active"},{"id":760,"name":"Nirbhay Jha","email":"nirbhay_jha@goodwin.name","gender":"male","status":"active"}]}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="6">
+                            <div class="step-ref passed">6</div>
+                            <div class="step-cell passed">Then status 200</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="step-row">
+                        <div class="step-container" id="7">
+                            <div class="step-ref passed">7</div>
+                            <div class="step-cell passed">* print response</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="7">17:12:59.049 [print] {
+  "data": [
+    {
+      "gender": "male",
+      "name": "Akroor Patil",
+      "id": 852,
+      "email": "akroor_patil@schumm.co",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Dr. Suryakant Varma",
+      "id": 848,
+      "email": "suryakant_varma_dr@klocko.info",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Damayanti Banerjee",
+      "id": 839,
+      "email": "banerjee_damayanti@dach-hermann.net",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Rep. Adwitiya Rana",
+      "id": 837,
+      "email": "adwitiya_rana_rep@braun.info",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Aayushman Dutta",
+      "id": 834,
+      "email": "dutta_aayushman@dickens.net",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Charuchandra Desai",
+      "id": 826,
+      "email": "desai_charuchandra@hermiston-hermann.co",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Ajeet Rana",
+      "id": 815,
+      "email": "ajeet_rana@weimann-koelpin.org",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Deepali Iyer",
+      "id": 813,
+      "email": "iyer_deepali@oberbrunner-kihn.com",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Ahalya Kaur",
+      "id": 811,
+      "email": "kaur_ahalya@adams.net",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Gudakesa Jha",
+      "id": 809,
+      "email": "jha_gudakesa@haley-swift.com",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Gayatri Dwivedi",
+      "id": 802,
+      "email": "dwivedi_gayatri@cartwright.name",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Anish Menon JD",
+      "id": 797,
+      "email": "anish_menon_jd@braun-halvorson.name",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Deeptimayee Bhattacharya",
+      "id": 790,
+      "email": "bhattacharya_deeptimayee@roob.co",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Chandraprabha Chopra",
+      "id": 782,
+      "email": "chopra_chandraprabha@barton.io",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Prof. Brajendra Guneta",
+      "id": 780,
+      "email": "guneta_prof_brajendra@gislason.info",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Achyut Deshpande III",
+      "id": 772,
+      "email": "iii_deshpande_achyut@braun.biz",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Jagdeep Mukhopadhyay",
+      "id": 768,
+      "email": "mukhopadhyay_jagdeep@kautzer.info",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Ajeet Kakkar",
+      "id": 765,
+      "email": "kakkar_ajeet@jones.info",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Kartik Achari",
+      "id": 762,
+      "email": "kartik_achari@wolff-rau.biz",
+      "status": "active"
+    },
+    {
+      "gender": "male",
+      "name": "Nirbhay Jha",
+      "id": 760,
+      "email": "nirbhay_jha@goodwin.name",
+      "status": "active"
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "total": 195,
+      "pages": 10,
+      "limit": 20,
+      "links": {
+        "next": "https://gorest.co.in/public/v1/users?page=2",
+        "current": "https://gorest.co.in/public/v1/users?page=1",
+        "previous": null
+      },
+      "page": 1
+    }
+  }
+}</div>
+                    <div class="step-row">
+                        <div class="step-container" id="8">
+                            <div class="step-ref passed">8</div>
+                            <div class="step-cell passed">* print tokenID</div>
+                        </div>
+                        <div class="time-cell passed">0</div>
+                    </div>
+                    <div class="preformatted" data-parent="8">17:12:59.049 [print] 5b62f89b0056585969f112bc3d07f726481559fab42599241dcab33d2b9f6d2e</div>
+                </div>
+            </div>
+                
+        </div>
+           
+  
+    </body>
+    
+</html>
