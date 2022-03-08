@@ -7,9 +7,9 @@ Feature: get api feature
     Then status 200
     * def jsonResponse = response
     * def jsonResponseData = jsonResponse.data
-    And match jsonResponseData.gender == 'male'
-    And match jsonResponseData.name == 'Chandini Adiga'
-    And match jsonResponseData.email == 'adiga_chandini@weber.com'
+    And match jsonResponseData.gender == 'female'
+    And match jsonResponseData.name == '#present'
+    And match jsonResponseData.email == '#present'
     And match jsonResponseData.id == 110
     * print 'my name is ' + myVarName
     
@@ -19,7 +19,7 @@ Feature: get api feature
     And params query
     When method GET
     Then status 200
-    And match response.meta.pagination.total == response.data.length
+    And match response.meta.pagination.limit == response.data.length
     * print response
 
     Scenario: Get user by id
